@@ -2,4 +2,3 @@ package-lock.json
 node_modules
 public/app.bundle.js
 public/vendor.bundle.js
-headers/auth-headers.js
