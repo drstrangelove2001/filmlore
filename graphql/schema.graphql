@@ -1,0 +1,185 @@
+scalar Object
+
+type Query {
+  getFilmDetails(filmId: Int!): FilmDetails!
+  getFilmShowTimes(filmId: Int!, date: String!): FilmShowTimes
+  getUser(email: String!): User
+  getUserPref(email: String!): UserPref
+  getFilmsComingSoon:[Films]!
+  getFilmsNowShowing:[Films]!
+  getPurchaseConfirmation(filmId:Int!,cinemaId:Int!,date:String!,time:String!): PurchaseConfirmation
+}
+
+type Mutation {
+  addUser(user: UserDetails): String!
+  addUserPref(userPref: UserPrefDetails): String!
+}
+
+type FilmDetails {
+  film_id: Int!
+  imdb_id: Int
+  film_name: String!
+  images: Object!
+  synopsis_long: String
+  distributor: String
+  release_dates: [ReleaseDate]
+  duration_mins: Int
+  trailers:Object
+  genres: [Genre]
+  cast: [CastMember]
+  directors: [Director]
+  producers: [Producer]
+  writers: [Writer]
+  show_dates: [ShowDate]
+}
+
+type FilmImages {
+  poster:ImageDetails
+  still:ImageDetails
+}
+
+type ImageDetails {
+  image_orientation: String
+  region: String
+  medium: Medium
+}
+
+type Medium {
+  film_image: String
+  width: Int
+  height: Int
+}
+
+type ReleaseDate {
+  release_date: String
+  notes: String
+}
+
+type AgeRating {
+  rating: String
+  age_rating_image: String
+  age_advisory: String
+}
+
+type Genre {
+  genre_id: Int
+  genre_name: String
+}
+
+type CastMember {
+  cast_id: Int
+  cast_name: String
+}
+
+type Director {
+  director_id: Int
+  director_name: String
+}
+
+type Producer {
+  producer_id: Int
+  producer_name: String
+}
+
+type Writer {
+  writer_id: Int
+  writer_name: String
+}
+
+type ShowDate {
+  date: String
+}
+
+type Status {
+  count: Int
+  state: String
+  method: String
+  message: String
+  request_method: String
+  version: String
+  territory: String
+  device_datetime_sent: String
+  device_datetime_used: String
+}
+
+type FilmShowTimes {
+  cinemas: [Cinema]
+}
+
+type Cinema {
+  cinema_id: Int!
+  cinema_name: String!
+  distance: Float
+  showings: Showing
+}
+
+type Showing {
+  Standard: ShowingDetails!
+}
+
+type ShowingDetails {
+  film_id: Int!
+  film_name: String!
+  times: [Showtime]
+}
+
+type Showtime {
+  start_time: String!
+  end_time: String!
+}
+
+input UserDetails {
+  email: String!
+  name: String!
+  nickname: String!
+  phone: Int!
+  age: Int!
+  gender: String!
+}
+
+type PurchaseConfirmation{
+  film_id: Int
+  film_name: String
+  date:String
+  time:String
+  cinema_id: Int
+  cinema_name: String
+  url:String
+}
+
+input UserPrefDetails {
+  email: String!
+  genresLoved: [String!]!
+  directorsLoved: [String!]!
+  actorsLoved: [String!]!
+  moviesLoved: [String!]!
+}
+
+type User {
+  email: String
+  name: String
+  nickname: String
+  phone: Int
+  age: Int
+  gender: String
+}
+
+type UserPref {
+  email: String
+  genresLoved: [String]
+  directorsLoved: [String]
+  actorsLoved: [String]
+  moviesLoved: [String]
+}
+
+type Films{
+  film_id: Int!
+  imdb_id: Int
+  imdb_title_id: String
+  film_name: String
+  release_dates: [ReleaseDate]
+  age_rating: [AgeRating]
+  trailers: String
+  synopsis_long: String
+  images: Object
+}

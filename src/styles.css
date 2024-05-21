@@ -1,0 +1,286 @@
+/* 
+This file contains the general styles in the application.
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Inria+Serif);
+
+.logo {
+  padding-right: 0.3em;
+}
+
+.filmlore-font {
+  font-family: 'Inria Serif';
+  color: white;
+}
+
+.reco-title {
+  font-size: 2em;
+}
+
+
+.title-caption {
+  font-size: 4em;
+  padding-top: 1em;
+}
+
+.title-caption-detail {
+  font-size: 1.3em;
+  padding-top: 3em;
+
+  p {
+    margin-bottom: 0em;
+  }
+}
+
+.register {
+  margin-top: 15em;
+}
+
+.register-btn {
+  border-radius: 2em;
+}
+
+.page-title {
+  font-size: 4em;
+}
+
+.registration {
+  padding-top: 2em;
+  width: 30em;
+}
+
+.form-label:after {
+  content: "*";
+  color: red;
+  padding-left: 0.3em;
+}
+
+.movie-search {
+  padding-top: 3em;
+  width: 50em;
+}
+
+.results-pane {
+  width: 80em;
+  margin-top: 5em;
+}
+
+.movie-results {
+  border-top: 1px;
+  padding-top: 20px;
+  border-width: thin;
+  margin-bottom: 1em;
+  border-style: outset;
+  color: rgb(152, 180, 199);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.reco-container {
+  margin-top: 5em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.reco-submit {
+  margin-top: 5em;
+}
+
+.card {
+  background-color: black;
+  border-radius: 0;
+  border: none;
+}
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.recoresult-title {
+  font-family: 'Inria Serif';
+  color: white;
+  font-size: 2.5em;
+  margin: 1em;
+  letter-spacing: 2px;
+}
+
+.card-title {
+  font-family: 'Inria Serif';
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.card-text {
+  font-family: 'Inria Sans';
+  color: white;
+  font-size: 12px;
+  text-align: left;
+}
+
+.genre-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.marked {
+  background-color: #FF9BD2;
+  color: white;
+}
+
+.unmarked {
+  background-color: #41B4F9;
+  color: white;
+}
+
+
+
+/* movie details style */
+
+.movie {
+  font-family: 'Inria Serif';
+  max-width: 1200px;
+  margin: 10px auto;
+  background-color: black;
+  padding: 20px;
+}
+
+.movie-detail {
+  border-bottom: 2px solid #ffffff;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.movie-image {
+  width: 200px;
+  height: 300px;
+  margin-right: 40px;
+}
+
+.movie-info p {
+  margin: 5px 0;
+}
+
+.showtimes_cinemas {
+  padding: 10px;
+  color: #ffffff;
+}
+
+.display_showtimes {
+  color: #ffffff;
+}
+
+.cinema-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.cinema-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cinema-name {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.cinema-distance {
+  color: grey;
+  font-size: 0.9em;
+  margin-left: 20px;
+}
+
+.showtime {
+  background-color: #147dc3;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  width: 85px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.showtimes-container {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+.timeslots-container {
+  display: flex;
+}
+
+.genres-container {
+  display: flex;
+  gap: 10px;
+}
+
+.genres {
+  background-color: #c569b1;
+  border-radius: 20px;
+  padding: 1px 10px;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* css for upcoming filter */
+.select-label {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #fff;
+  font-family: 'Inria Serif';
+}
+
+.select-box {
+  width: 200px;
+  height: 30px;
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+.apply-button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  font-family: 'Inria Serif';
+}
+
+.openai-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  font-family: 'Inria Serif';
+  color: rgb(192, 189, 189);
+}

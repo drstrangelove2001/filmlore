@@ -1,0 +1,50 @@
+{
+  "name": "filmlore",
+  "version": "1.0.0",
+  "description": "A fully personalized film recommender based on React.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npx webpack serve\" \"node graphql/server.js\"",
+    "compile": "npx webpack",
+    "init-db": "mongosh filmlore db/init.mongo.js",
+    "watch": "babel src --out-dir public --watch --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IT5007-2320/course-project-team-39.git"
+  },
+  "author": "Team 39",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IT5007-2320/course-project-team-39/issues"
+  },
+  "homepage": "https://github.com/IT5007-2320/course-project-team-39#readme",
+  "dependencies": {
+    "@react-oauth/google": "^0.12.1",
+    "apollo-server-express": "^3.13.0",
+    "axios": "^1.6.8",
+    "concurrently": "^8.2.2",
+    "express": "^4.16.4",
+    "graphql": "^16.8.1",
+    "lottie-react": "^2.4.0",
+    "mongodb": "^3.7.3",
+    "nodemon": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.3.0",
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
