@@ -86,8 +86,14 @@ The app will run in http://localhost:3000/ if all things work well!
 
 For GraphQL playground, go to http://localhost:4000/graphql/
 
-## Copyright (C) 2024 - FilmLore
-## Developers - Sariha Ganapthy, Sricharan Sriram, Wen Shu
-## Advisor - Prasanna Karthik Vairam
-## Part of module - IT5007
-## University - NUS
+## Copyright notice
+
+Copyright (C) 2024 - FilmLore
+
+Developers - Sariha Ganapthy, Sricharan Sriram, Wen Shu
+
+Advisor - Prasanna Karthik Vairam
+
+Part of module - IT5007
+
+University - NUS
